@@ -4,7 +4,7 @@
 set shell=/bin/bash
 set t_Co=256           			  " 256 colors
 set nocompatible       			  " be iMproved
-let mapleader=","			        " coma vs slash
+let mapleader=","			        
 filetype off 				          " required!
 
 
