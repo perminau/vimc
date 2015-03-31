@@ -22,10 +22,12 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'slim-template/vim-slim.git'
 Bundle "tomasr/molokai"
 
 " All plugins must be before this line
 call vundle#end()             " required
+syntax enable
 filetype plugin indent on     " required
 
 
@@ -46,7 +48,7 @@ set numberwidth=1
 set title 
 set ruler 
 
-set colorcolumn=82
+set colorcolumn=120
 
 set confirm
 set showcmd
