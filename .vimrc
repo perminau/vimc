@@ -23,6 +23,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'slim-template/vim-slim.git'
+Plugin 'rking/ag.vim'
 Bundle "tomasr/molokai"
 
 " All plugins must be before this line
@@ -67,9 +68,18 @@ nnoremap <c-w><Up> :resize +3<cr>
 nnoremap <c-w><Down> :resize -3<cr>
 
 " ============================================================================
+" =========================== CTRLP SETTINGS =================================
+"
+let g:ctrlp_show_hidden = 1
+
+
+" ============================================================================
 " ============================ COLOR SCHEME ==================================
 "
 colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
+
+" Override molokai brackets highlighting rule
+hi MatchParen cterm=bold ctermbg=none ctermfg=red
 
