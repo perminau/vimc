@@ -24,6 +24,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'rking/ag.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'kchmck/vim-coffee-script'
 Bundle "tomasr/molokai"
 
 " All plugins must be before this line
@@ -67,10 +69,22 @@ nnoremap <c-w><Right> :vertical resize -3<cr>
 nnoremap <c-w><Up> :resize +3<cr>
 nnoremap <c-w><Down> :resize -3<cr>
 
+
+" ============================================================================
+" ============================= AG SETTINGS ==================================
+"
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+
 " ============================================================================
 " =========================== CTRLP SETTINGS =================================
 "
 let g:ctrlp_show_hidden = 1
+set wildignore+=*/tmp/*,*/public/uploads/*
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|idea)$',
+  \ 'file': '\v\.(log|swp)$',
+  \ }
 
 
 " ============================================================================
