@@ -24,6 +24,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'rking/ag.vim'
+Plugin 'wesQ3/vim-windowswap'
 Bundle "tomasr/molokai"
 
 " All plugins must be before this line
