@@ -24,6 +24,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'rking/ag.vim'
+Plugin 'wesQ3/vim-windowswap'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'kchmck/vim-coffee-script'
 Bundle "tomasr/molokai"
