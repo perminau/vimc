@@ -60,6 +60,15 @@ set ignorecase                " Default to using case insensitive searches,
 set hlsearch                  " Highlight searches by default.
 set incsearch                 " Incrementally search while typing a /regex
 
+" VIm history
+set hi=1000
+
+" Goodbye arrows
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 " hide matches on <leader>space
 nnoremap <leader><space> :nohlsearch<cr>
 
@@ -73,8 +82,18 @@ nnoremap <c-w><Down> :resize -3<cr>
 " ============================================================================
 " ============================= AG SETTINGS ==================================
 "
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
 
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+  ca Ag Ag!
+endif
 
 " ============================================================================
 " =========================== CTRLP SETTINGS =================================
